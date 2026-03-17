@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { ReactComponent as Logo } from '../goodflip-logo.svg';
 
 const Navbar: React.FC = () => {
@@ -35,11 +35,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* CTA */}
-          <div className="hidden md:flex items-center gap-4">
-            <a href="tel:+918511975757" className="flex items-center gap-2 text-sm text-gray-600 hover:text-gf-green">
-              <Phone size={16} />
-              <span>+91 851 197 5757</span>
-            </a>
+          <div className="hidden md:flex items-center">
             <button onClick={() => scrollTo('lead-form')} className="bg-gf-green hover:bg-gf-green-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:shadow-lg">
               Talk to a Health Counsellor
             </button>
@@ -59,10 +55,6 @@ const Navbar: React.FC = () => {
               <button onClick={() => scrollTo('why-choose')} className="text-left px-2 py-2 text-gray-600 hover:text-gf-green">Why GoodFlip</button>
               <button onClick={() => scrollTo('testimonials')} className="text-left px-2 py-2 text-gray-600 hover:text-gf-green">Results</button>
               <button onClick={() => scrollTo('pricing')} className="text-left px-2 py-2 text-gray-600 hover:text-gf-green">Pricing</button>
-              <a href="tel:+918511975757" className="flex items-center gap-2 px-2 py-2 text-gray-600">
-                <Phone size={16} />
-                <span>+91 851 197 5757</span>
-              </a>
               <button onClick={() => scrollTo('lead-form')} className="bg-gf-green text-white px-6 py-3 rounded-full text-sm font-semibold mt-2">
                 Talk to a Health Counsellor
               </button>

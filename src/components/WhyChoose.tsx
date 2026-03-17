@@ -17,14 +17,14 @@ const pillars = [
   {
     icon: <Stethoscope size={28} />,
     title: 'Doctor-Led Guidance',
-    description: 'Endocrinologists and physicians oversee your entire journey. We work with your existing doctor, providing clinical outcomes that empower safe de-prescription when remission is achieved.',
+    description: 'Endocrinologists and physicians oversee your entire journey, providing expert clinical guidance to diagnose and manage metabolic conditions with precision.',
     highlight: 'Specialist-led care',
   },
   {
     icon: <Pill size={28} />,
     title: 'Science-Backed Supplements',
-    description: 'Accelerate progress with plant-based supplements (Bitter Melon, ACV, and more). Effervescent fizz tablets designed to catalyse your path to remission.',
-    highlight: 'Plant-based formulas',
+    description: 'Correct nutritional deficiencies with targeted supplementation, with a focus on essential micro-nutrients that support metabolic function and accelerate your path to remission.',
+    highlight: 'Micro-nutrient focused',
   },
   {
     icon: <Smartphone size={28} />,
@@ -40,7 +40,7 @@ const WhyChoose: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <span className="inline-block text-sm font-semibold text-gf-green bg-gf-green-light px-4 py-1.5 rounded-full mb-4">
-            The GoodFlip Difference
+            The GoodFlip Approach
           </span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-gf-dark mb-4">
             Your 5-Pillar Ecosystem
@@ -54,9 +54,7 @@ const WhyChoose: React.FC = () => {
           {pillars.map((pillar, i) => (
             <div
               key={i}
-              className={`rounded-2xl p-8 border border-gray-100 hover:border-gf-green/30 hover:shadow-lg transition-all duration-300 group ${
-                i === 0 ? 'md:col-span-2 lg:col-span-1' : ''
-              } ${i < 2 ? 'bg-gf-green-light/30' : 'bg-white'}`}
+              className="rounded-2xl p-8 bg-white border border-gray-100 hover:border-gf-green/30 hover:shadow-lg transition-all duration-300 group"
             >
               <div className="w-14 h-14 bg-gf-green/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-gf-green group-hover:text-white transition-all">
                 <span className="text-gf-green group-hover:text-white transition-colors">{pillar.icon}</span>
@@ -77,7 +75,7 @@ const WhyChoose: React.FC = () => {
         <div className="mt-12 bg-gradient-to-r from-gf-green to-gf-green-dark rounded-2xl p-8 md:p-10 text-center text-white">
           <p className="text-2xl md:text-3xl font-serif font-bold mb-2">Our Mission</p>
           <p className="text-lg text-green-100">
-            Help <span className="font-bold text-white">1 million people</span> achieve diabetes remission by <span className="font-bold text-white">2030</span>.
+            Help <span className="font-bold text-white">1 million people</span> achieve remission by <span className="font-bold text-white">2030</span>.
           </p>
         </div>
       </div>

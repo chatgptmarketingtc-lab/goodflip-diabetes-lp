@@ -15,8 +15,8 @@ const faqs = [
     a: 'Each program includes specialist consultations with expert doctors, smart tracking using CGM devices, advanced diagnostics with 80+ biomarkers, personalised 1:1 coaching from nutritionists and fitness experts, and science-backed supplements to accelerate improvements.',
   },
   {
-    q: 'How is the diet plan personalised for me?',
-    a: 'Your diet plan is based on your Personalised Glycemic Response (PGR) data from the CGM device, your cuisine preferences, and regional food habits. This means your plan is built on actual data of how YOUR body responds to different foods — not generic guidelines.',
+    q: 'How is the diet program personalised for me?',
+    a: 'Your diet program is based on your Personalised Glycemic Response (PGR) data from the CGM device, your cuisine preferences, and regional food habits. This means your program is built on actual data of how YOUR body responds to different foods — not generic guidelines.',
   },
   {
     q: 'Do I need to stop my current medication?',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Shield, Users, Activity } from 'lucide-react';
+import { ArrowRight, Shield, FlaskConical, Cpu, HeartPulse, Activity } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const scrollToForm = () => {
@@ -34,9 +34,11 @@ const Hero: React.FC = () => {
               {' '}Naturally
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
-              Doctor-led guidance, real-time CGM tracking, personalised nutrition coaching, and science-backed supplements.
-              <span className="font-semibold text-gf-dark"> 92% of members saw a reduction in HbA1c.</span>
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-2">
+              Doctor-led guidance, real-time CGM tracking, personalised nutrition, exercise &amp; CBT coaching, and comprehensive lab tests to measure outcomes.
+            </p>
+            <p className="text-lg md:text-xl font-semibold text-gf-dark mb-8">
+              92% of members saw a reduction in HbA1c.*
             </p>
 
             {/* CTA Buttons */}
@@ -52,23 +54,27 @@ const Hero: React.FC = () => {
                 onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
                 className="border-2 border-gf-green text-gf-green hover:bg-gf-green hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition-all flex items-center justify-center"
               >
-                View Plans
+                View Programs
               </button>
             </div>
 
             {/* Trust indicators */}
-            <div className="flex flex-wrap gap-6 items-center">
+            <div className="grid grid-cols-2 gap-4">
               <div className="flex items-center gap-2 text-sm text-gray-500">
-                <Shield size={18} className="text-gf-green" />
+                <Shield size={18} className="text-gf-green flex-shrink-0" />
                 <span>Doctor-led program</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-500">
-                <Users size={18} className="text-gf-green" />
-                <span>1M remission mission</span>
+                <FlaskConical size={18} className="text-gf-green flex-shrink-0" />
+                <span>Comprehensive Lab tests</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-500">
-                <Activity size={18} className="text-gf-green" />
-                <span>24/7 CGM tracking</span>
+                <Cpu size={18} className="text-gf-green flex-shrink-0" />
+                <span>Integrated with IoT Devices - BCA and CGM</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-gray-500">
+                <HeartPulse size={18} className="text-gf-green flex-shrink-0" />
+                <span>Metabolic-first approach</span>
               </div>
             </div>
           </div>

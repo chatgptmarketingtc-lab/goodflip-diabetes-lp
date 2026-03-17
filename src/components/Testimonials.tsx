@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Quote, Play } from 'lucide-react';
 
 const testimonials = [
   {
@@ -34,6 +34,47 @@ const testimonials = [
   },
 ];
 
+const VideoTestimonial: React.FC = () => {
+  const [playing, setPlaying] = useState(false);
+
+  return (
+    <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-black aspect-video">
+      {playing ? (
+        <iframe
+          src="https://www.youtube.com/embed/gHoe5duShI8?autoplay=1&rel=0"
+          title="GoodFlip Member Testimonial"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full absolute inset-0"
+          frameBorder="0"
+        />
+      ) : (
+        <button onClick={() => setPlaying(true)} className="w-full h-full group relative">
+          <img
+            src="https://img.youtube.com/vi/gHoe5duShI8/maxresdefault.jpg"
+            alt="Video testimonial thumbnail"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors" />
+          {/* Play button */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-16 h-16 md:w-20 md:h-20 bg-gf-green rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+              <Play size={28} className="text-white ml-1" fill="white" />
+            </div>
+          </div>
+          {/* Label */}
+          <div className="absolute bottom-4 left-4 right-4">
+            <span className="inline-block bg-white/90 backdrop-blur-sm text-gf-dark text-sm font-semibold px-4 py-2 rounded-full">
+              Watch a member's story
+            </span>
+          </div>
+        </button>
+      )}
+    </div>
+  );
+};
+
 const Testimonials: React.FC = () => {
   const [current, setCurrent] = useState(0);
 
@@ -53,6 +94,11 @@ const Testimonials: React.FC = () => {
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Hear from people who transformed their diabetes management with GoodFlip.
           </p>
+        </div>
+
+        {/* Video Testimonial */}
+        <div className="max-w-3xl mx-auto mb-12">
+          <VideoTestimonial />
         </div>
 
         {/* Desktop: Show all cards */}

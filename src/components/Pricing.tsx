@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, Star } from 'lucide-react';
+import { Check, Star, CreditCard, Wallet } from 'lucide-react';
 
 const Pricing: React.FC = () => {
   const [duration, setDuration] = useState<'6' | '12'>('6');
@@ -15,14 +15,14 @@ const Pricing: React.FC = () => {
         popular: false,
         features: [
           'Doctor-led program oversight',
-          'Personalised nutrition plan',
+          'Personalised nutrition program',
           '1:1 fitness coaching',
           'Habit & stress management',
           '80+ biomarker diagnostics',
           'Smart Body Composition Analyser',
           'GoodFlip App access',
           'Unlimited in-app chat support',
-          'Science-backed supplements',
+          'Daily live exercise sessions on group webinars',
           'Live Group Expert Sessions',
         ],
       },
@@ -57,14 +57,14 @@ const Pricing: React.FC = () => {
         popular: false,
         features: [
           'Doctor-led program oversight',
-          'Personalised nutrition plan',
+          'Personalised nutrition program',
           '1:1 fitness coaching',
           'Habit & stress management',
           '80+ biomarker diagnostics',
           'Smart Body Composition Analyser',
           'GoodFlip App access',
           'Unlimited in-app chat support',
-          'Science-backed supplements',
+          'Daily live exercise sessions on group webinars',
           'Live Group Expert Sessions',
         ],
       },
@@ -101,10 +101,10 @@ const Pricing: React.FC = () => {
             Simple Pricing
           </span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-gf-dark mb-4">
-            Choose Your Plan
+            Choose Your Program
           </h2>
           <p className="text-gray-600 text-lg max-w-xl mx-auto mb-8">
-            Invest in your health with a plan that fits your needs. No hidden fees.
+            Invest in your health with a program that fits your needs. No hidden fees.
           </p>
 
           {/* Duration Toggle */}
@@ -195,8 +195,31 @@ const Pricing: React.FC = () => {
         </div>
 
         <p className="text-center text-sm text-gray-400 mt-8">
-          All plans include at-home sample collection from accredited labs.
+          All programs include at-home sample collection from accredited labs.
         </p>
+
+        {/* Easy payment callout */}
+        <div className="mt-8 bg-gf-gray border border-gray-200 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-gf-green/10 rounded-xl flex items-center justify-center">
+              <CreditCard size={20} className="text-gf-green" />
+            </div>
+            <div>
+              <p className="font-semibold text-gf-dark text-sm">Easy EMI Available</p>
+              <p className="text-xs text-gray-500">No-cost EMI on select cards</p>
+            </div>
+          </div>
+          <div className="hidden md:block w-px h-10 bg-gray-300" />
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-gf-green/10 rounded-xl flex items-center justify-center">
+              <Wallet size={20} className="text-gf-green" />
+            </div>
+            <div>
+              <p className="font-semibold text-gf-dark text-sm">Multiple Payment Options</p>
+              <p className="text-xs text-gray-500">UPI, Cards, Net Banking &amp; Wallets</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

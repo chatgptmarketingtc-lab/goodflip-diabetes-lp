@@ -60,7 +60,10 @@ const Stats: React.FC = () => {
   return (
     <section className="py-8 md:py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-sm text-gray-500 mb-6">
+        <h2 className="font-serif text-3xl md:text-4xl font-bold text-gf-dark text-center mb-3">
+          92% of members saw a reduction in HbA1c*
+        </h2>
+        <p className="text-center text-base md:text-lg text-gray-500 mb-10">
           As per a study published in <span className="font-semibold">Frontiers</span>, GoodFlip's Diabetes Care Program delivers:
         </p>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
