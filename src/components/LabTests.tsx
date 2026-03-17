@@ -4,7 +4,6 @@ import {
   ShieldCheck,
   Activity,
   Heart,
-  Atom,
   FlaskConical,
   Microscope,
   Beaker,
