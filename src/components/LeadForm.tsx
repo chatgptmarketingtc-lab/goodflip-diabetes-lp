@@ -4,7 +4,7 @@ import { Send, Shield, Clock, ChevronRight, ChevronLeft, Check } from 'lucide-re
 // ============================================================
 // GOOGLE SHEETS WEBHOOK CONFIG
 // Replace the URL below with your Google Apps Script / Zapier / Make webhook URL
-const WEBHOOK_URL = '';
+const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyPl0se_Vcf3kkdszE-wjHdT8sjwBUeu6I7A-uEM5Jgq-jpSJrAMLO074LHi9cexHhu/exec';
 // ============================================================
 
 interface FormData {
