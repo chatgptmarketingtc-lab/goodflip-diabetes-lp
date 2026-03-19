@@ -1,37 +1,28 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Stats from './components/Stats';
-import WhoIsItFor from './components/WhoIsItFor';
-import WhyChoose from './components/WhyChoose';
-import Testimonials from './components/Testimonials';
-import Pricing from './components/Pricing';
-import LabTests from './components/LabTests';
-import Devices from './components/Devices';
-import Supplements from './components/Supplements';
-import LeadForm from './components/LeadForm';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
-import StickyBar from './components/StickyBar';
+import Home from './pages/Home';
+import DiabetesProgram from './pages/DiabetesProgram';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      <Hero />
-      <Stats />
-      <LeadForm />
-      <WhoIsItFor />
-      <WhyChoose />
-      <Testimonials />
-      <Pricing />
-      <LabTests />
-      <Devices />
-      <Supplements />
-      <FAQ />
-      <Footer />
-      <StickyBar />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* Home — programs hub */}
+        <Route path="/" element={<Home />} />
+
+        {/* Diabetes program — full LP with its own Navbar */}
+        <Route
+          path="/diabetes-program"
+          element={
+            <div className="min-h-screen bg-white">
+              <Navbar />
+              <DiabetesProgram />
+            </div>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
